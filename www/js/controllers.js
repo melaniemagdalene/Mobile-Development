@@ -1,4 +1,5 @@
-angular.module('starter.controllers', [])
+// Instantiating a module called starter.controllers
+angular.module('stockMarketApp.controllers', [])
 
 .controller('AppCtrl', function($scope, $ionicModal, $timeout) {
 
@@ -8,6 +9,14 @@ angular.module('starter.controllers', [])
   // listen for the $ionicView.enter event:
   //$scope.$on('$ionicView.enter', function(e) {
   //});
+  $scope.playlists = [
+    { title: 'test value', id: 1 },
+    { title: 'Chill', id: 2 },
+    { title: 'Dubstep', id: 3 },
+    { title: 'Indie', id: 4 },
+    { title: 'Rap', id: 5 },
+    { title: 'Cowbell', id: 6 }
+  ];
 
   // Form data for the login modal
   $scope.loginData = {};
@@ -43,14 +52,18 @@ angular.module('starter.controllers', [])
 
 .controller('PlaylistsCtrl', function($scope) {
   $scope.playlists = [
-    { title: 'Reggae', id: 1 },
+    { title: 'array object title property defined the second time', id: 1 },
     { title: 'Chill', id: 2 },
     { title: 'Dubstep', id: 3 },
     { title: 'Indie', id: 4 },
     { title: 'Rap', id: 5 },
-    { title: 'Cowbell', id: 6 }
+    { title: 'Cowbell', id: 6 },
+    { title: 'new data from conotroller', id: 7 },
   ];
 })
 
 .controller('PlaylistCtrl', function($scope, $stateParams) {
+
+  $scope.dynamicViewTitleFromStateParam = $stateParams.id;
+
 });

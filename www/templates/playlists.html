@@ -1,8 +1,9 @@
-<ion-view view-title="Playlists">
+<ion-view view-title="Test Title">
   <ion-content>
     <ion-list>
-      <ion-item ng-repeat="playlist in playlists" href="#/app/playlists/{{playlist.id}}">
-        {{playlist.title}}
+      <!-- ng-repeat iterates over the items in the scope array (playlists in the controllers) -->
+      <ion-item ng-repeat="abitraryItemInstanceName in playlists" ng-href="#/app/playlists/{{playlist.id}}">
+          test for id: {{playlist.id}}{{abitraryItemInstanceName.title}}
       </ion-item>
     </ion-list>
   </ion-content>
